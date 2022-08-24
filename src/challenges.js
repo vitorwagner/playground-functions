@@ -54,11 +54,30 @@ function fizzBuzz() {
 
 // Desafio 9
 // Método força bruta
-function encode() {
-  // seu código aqui
+function encode(unencodedString) {
+  let lettersArray = unencodedString.split('');
+  for (let i = 0; i < lettersArray.length; i += 1) {
+    lettersArray[i] = lettersArray[i].replace('a', '1');
+    lettersArray[i] = lettersArray[i].replace('e', '2');
+    lettersArray[i] = lettersArray[i].replace('i', '3');
+    lettersArray[i] = lettersArray[i].replace('o', '4');
+    lettersArray[i] = lettersArray[i].replace('u', '5');
+  }
+  let encodedString = lettersArray.join('');
+  return encodedString;
 }
-function decode() {
-  // seu código aqui
+
+function decode(encodedString) {
+  let lettersArray = encodedString.split('');
+  for (let i = 0; i < lettersArray.length; i += 1) {
+    lettersArray[i] = lettersArray[i].replace('1', 'a');
+    lettersArray[i] = lettersArray[i].replace('2', 'e');
+    lettersArray[i] = lettersArray[i].replace('3', 'i');
+    lettersArray[i] = lettersArray[i].replace('4', 'o');
+    lettersArray[i] = lettersArray[i].replace('5', 'u');
+  }
+  let decodedString = lettersArray.join('');
+  return decodedString;
 }
 
 // Desafio 10
