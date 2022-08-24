@@ -13,8 +13,17 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+// Referência: https://codereview.stackexchange.com/questions/115885/extract-numbers-from-a-string-javascript
+function hydrate(drinks) {
+  let numbersOfDrinks = drinks.match(/[+-]?\d+(?:\.\d+)?/g).map(Number);
+  let water = 0;
+  for (let number of numbersOfDrinks) {
+    water += number
+  }
+  if (water === 1) {
+    return `${water} copo de água`;
+  }
+  return `${water} copos de água`;
 }
 
 module.exports = {
