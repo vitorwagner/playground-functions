@@ -12,13 +12,14 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(sentence) {
+  return sentence.split(' ');
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+// Referência para template strings: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Template_literals
+function concatName(stringArray) {
+  return `${stringArray[stringArray.length - 1]}, ${stringArray[0]}`;
 }
 
 // Desafio 5
