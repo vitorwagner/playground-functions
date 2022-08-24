@@ -34,7 +34,7 @@ function highestCount() {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let result
+  let result;
   let distanceCat1 = Math.abs(mouse - cat1);
   let distanceCat2 = Math.abs(mouse - cat2);
   if (distanceCat1 < distanceCat2) {
@@ -53,6 +53,7 @@ function fizzBuzz() {
 }
 
 // Desafio 9
+// Método força bruta
 function encode() {
   // seu código aqui
 }
@@ -61,8 +62,16 @@ function decode() {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(techArray, name) {
+  if (techArray.length === 0) {
+    return 'Vazio!';
+  }
+  let sortedArray = techArray.sort();
+  let newTechArray = [];
+  for (let technology of sortedArray) {
+    newTechArray.push({ tech: technology, name });
+  }
+  return newTechArray;
 }
 
 module.exports = {
