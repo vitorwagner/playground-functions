@@ -32,6 +32,7 @@ function footballPoints(wins, ties) {
 function findHighest(valueArray) {
   return Math.max.apply(null, valueArray);
 }
+
 function highestCount(valueArray) {
   let highest = findHighest(valueArray);
   let count = 0;
@@ -59,8 +60,24 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+// Uso de função auxiliar para reduzir complexidade da função 'fizzBuzz'.
+function fizzBuzzCheck(number) {
+  if (number % 3 === 0 && number % 5 === 0) {
+    return 'fizzBuzz';
+  } if (number % 3 === 0) {
+    return 'fizz';
+  } if (number % 5 === 0) {
+    return 'buzz';
+  }
+  return 'bug!';
+}
+
+function fizzBuzz(numbersArray) {
+  let fizzBuzzArray = [];
+  for (let number of numbersArray) {
+    fizzBuzzArray.push(fizzBuzzCheck(number));
+  }
+  return fizzBuzzArray;
 }
 
 // Desafio 9
