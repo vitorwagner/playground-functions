@@ -28,8 +28,19 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+// Utilizando função auxiliar para encontrar o valor máximo. Referência: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max
+function findHighest(valueArray) {
+  return Math.max.apply(null, valueArray);
+}
+function highestCount(valueArray) {
+  let highest = findHighest(valueArray);
+  let count = 0;
+  for (let value of valueArray) {
+    if (value === highest) {
+      count += 1;
+    }
+  }
+  return count;
 }
 
 // Desafio 7

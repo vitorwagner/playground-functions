@@ -18,7 +18,7 @@ function hydrate(drinks) {
   let numbersOfDrinks = drinks.match(/[+-]?\d+(?:\.\d+)?/g).map(Number);
   let water = 0;
   for (let number of numbersOfDrinks) {
-    water += number
+    water += number;
   }
   if (water === 1) {
     return `${water} copo de água`;
